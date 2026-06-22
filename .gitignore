@@ -1,0 +1,61 @@
+# ==========================================
+# 🐍 BACKEND RULES (Python & LangChain)
+# ==========================================
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+backend/repositories/
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Environment variables (Crucial for API keys)
+.env
+.env.local
+.env.*.local
+
+# Database / Vector Store directories (ChromaDB)
+.chroma/
+chroma_db/
+chroma/
+
+# HuggingFace / Sentence-Transformers cache
+.cache/
+
+
+# ==========================================
+# ⚛️ FRONTEND RULES (React / Vite / Create React App)
+# ==========================================
+# Dependencies
+node_modules/
+jspm_packages/
+
+# Production build outputs
+build/
+dist/
+out/
+
+# Frontend testing & logs
+coverage/
+*.eslintcache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Next.js/Remix cache if you use them later
+.next/
+.htmlnanorc
+
+
+# ==========================================
+# 💻 SYSTEM RULES (Generic OS Files)
+# ==========================================
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
