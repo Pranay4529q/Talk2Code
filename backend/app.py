@@ -29,7 +29,7 @@ from config import (
 )
 
 app = FastAPI(
-    title="TalkToCode AI"
+    title="Talk2Code AI"
 )
 
 
