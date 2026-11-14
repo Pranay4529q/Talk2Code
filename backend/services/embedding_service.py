@@ -1,13 +1,16 @@
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from functools import lru_cache
 
 from config import EMBEDDING_MODEL
 
 
-class EmbeddingService:
+@lru_cache(maxsize=1)
+def get_embeddings():
+    from sentence_transformers import SentenceTransformer
 
-    @staticmethod
-    def get_embeddings():
+    return SentenceTransformer(EMBEDDING_MODEL)
 
-        return HuggingFaceEmbeddings(
-            model_name=EMBEDDING_MODEL
-        )
+
+def embed_texts(texts):
+    return get_embeddings().encode(
+        texts, normalize_embeddings=True, show_progress_bar=False
+    ).tolist()
