@@ -1,0 +1,10 @@
+[
+  {"question":"Where is the HEAD commit resolved after cloning?", "path":"services/github_service.py", "symbol":"GithubService"},
+  {"question":"What checks prevent indexing a symbolic link?", "path":"services/file_service.py", "symbol":"FileService"},
+  {"question":"How are decorated Python functions assigned a starting line?", "path":"services/file_service.py", "symbol":"chunk_python"},
+  {"question":"Where is the embedding model initialized and cached?", "path":"services/embedding_service.py", "symbol":"get_embeddings"},
+  {"question":"How are lexical and dense rankings combined through reciprocal ranks?", "path":"services/retrieval.py", "symbol":"fuse_rankings"},
+  {"question":"Where does the system decide which evidence IDs become GitHub links?", "path":"services/rag_service.py", "symbol":"RAGService"},
+  {"question":"Where does the backend reject a question for a missing repository index?", "path":"app.py", "symbol":"chat"},
+  {"question":"Where does the code atomically replace a saved index?", "path":"services/vector_store_service.py", "symbol":"VectorStoreService"}
+]

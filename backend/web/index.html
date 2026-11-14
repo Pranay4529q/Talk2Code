@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Talk2Code</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script src="/assets/chat.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Talk2Code</h1>
+      <p>Explore a public Python repository and trace answers back to the source.</p>
+    </header>
+    <section>
+      <form id="repo">
+        <label for="url">GitHub repository URL</label>
+        <div class="row">
+          <input id="url" type="url" placeholder="https://github.com/owner/repo" required maxlength="250">
+          <button>Index repository</button>
+        </div>
+      </form>
+      <p id="index-status" role="status"></p>
+    </section>
+    <section>
+      <form id="chat">
+        <label for="question">Ask about the code</label>
+        <div class="row">
+          <input id="question" placeholder="Where does request handling start?" required maxlength="1000" disabled>
+          <button disabled>Ask</button>
+        </div>
+      </form>
+      <p id="chat-status" role="status"></p>
+      <div id="history" aria-live="polite"></div>
+    </section>
+  </main>
+</body>
+</html>
